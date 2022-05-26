@@ -1,5 +1,7 @@
 package bg.softuni.mobilele.model.entities;
 
+import bg.softuni.mobilele.model.enums.Category;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
@@ -29,8 +31,8 @@ public class Model extends BaseEntity{
     @Column(nullable = false)
     private LocalDate modified;
 
-//    @ManyToOne
-//    private Brand brand;
+    @ManyToOne
+    private Brand brand;
 
     public Model() {
     }
