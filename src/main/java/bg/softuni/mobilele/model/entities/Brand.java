@@ -17,7 +17,11 @@ public class Brand extends BaseEntity{
     @Column(nullable = false)
     private LocalDate modified;
 
-    @OneToMany(mappedBy = "brand", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToMany(
+            mappedBy = "brand",
+            fetch = FetchType.EAGER,
+            cascade = CascadeType.ALL
+    )
     private List<Model> models;
 
     public Brand() {

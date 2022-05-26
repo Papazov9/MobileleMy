@@ -4,5 +4,5 @@ public enum Category {
     CAR,
     BUS,
     TRUCK,
-    MOTORCYCLE
+    MOTORCYCLE;
 }
