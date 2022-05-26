@@ -5,11 +5,7 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "models")
-public class Model {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+public class Model extends BaseEntity{
 
     @Column(nullable = false)
     private String name;
@@ -34,14 +30,6 @@ public class Model {
     private Brand brand;
 
     public Model() {
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public String getName() {

@@ -5,11 +5,9 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "brands")
-public class Brand {
+public class Brand extends BaseEntity{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+
 
     @Column(nullable = false)
     private String name;
@@ -21,14 +19,6 @@ public class Brand {
     private LocalDate modified;
 
     public Brand() {
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public String getName() {
