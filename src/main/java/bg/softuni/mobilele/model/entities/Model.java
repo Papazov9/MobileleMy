@@ -29,8 +29,8 @@ public class Model extends BaseEntity{
     @Column(nullable = false)
     private LocalDate modified;
 
-    @ManyToOne
-    private Brand brand;
+//    @ManyToOne
+//    private Brand brand;
 
     public Model() {
     }
@@ -89,13 +89,5 @@ public class Model extends BaseEntity{
 
     public void setModified(LocalDate modified) {
         this.modified = modified;
-    }
-
-    public Brand getBrand() {
-        return brand;
-    }
-
-    public void setBrand(Brand brand) {
-        this.brand = brand;
     }
 }
