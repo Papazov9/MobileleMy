@@ -14,9 +14,6 @@ public class UserRoleEntity extends BaseEntity{
     @Enumerated(EnumType.STRING)
     private Role name;
 
-    public UserRoleEntity() {
-    }
-
     public Role getName() {
         return name;
     }

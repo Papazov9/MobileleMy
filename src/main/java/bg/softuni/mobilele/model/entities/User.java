@@ -36,9 +36,6 @@ public class User extends BaseEntity{
     @Column(nullable = false)
     private LocalDate modified;
 
-    public User() {
-    }
-
     public String getUsername() {
         return username;
     }

@@ -2,6 +2,7 @@ package bg.softuni.mobilele.model.entities;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -22,10 +23,7 @@ public class Brand extends BaseEntity{
             fetch = FetchType.EAGER,
             cascade = CascadeType.ALL
     )
-    private List<Model> models;
-
-    public Brand() {
-    }
+    private List<Model> models = new ArrayList<>();
 
     public String getName() {
         return name;
