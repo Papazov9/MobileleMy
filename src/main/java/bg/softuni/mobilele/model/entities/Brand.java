@@ -7,8 +7,6 @@ import java.time.LocalDate;
 @Table(name = "brands")
 public class Brand extends BaseEntity{
 
-
-
     @Column(nullable = false)
     private String name;
 

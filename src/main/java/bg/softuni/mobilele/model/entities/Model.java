@@ -11,13 +11,16 @@ public class Model extends BaseEntity{
     private String name;
 
     @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
     private Category category;
 
     @Column(nullable = false, name = "image_url")
     private String imageUrl;
 
+    @Column(name = "start_year")
     private int startYear;
 
+    @Column(name = "end_year")
     private int endYear;
 
     @Column(nullable = false)
