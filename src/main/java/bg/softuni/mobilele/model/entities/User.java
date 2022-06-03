@@ -9,7 +9,7 @@ import java.util.List;
 public class User extends BaseEntity{
 
     @Column(nullable = false, unique = true)
-    private String username;
+    private String email;
 
     @Column(nullable = false)
     private String password;
@@ -27,21 +27,21 @@ public class User extends BaseEntity{
     @ManyToMany(fetch = FetchType.EAGER)
     private List<UserRoleEntity> userRoles;
 
-    @Column(nullable = false, name = "image_url")
+    @Column(name = "image_url")
     private String imageUrl;
 
-    @Column(nullable = false)
-    private LocalDate created;
+//    @Column(nullable = false)
+//    private LocalDate created;
+//
+//    @Column(nullable = false)
+//    private LocalDate modified;
 
-    @Column(nullable = false)
-    private LocalDate modified;
-
-    public String getUsername() {
-        return username;
+    public String getEmail() {
+        return email;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {
@@ -92,19 +92,19 @@ public class User extends BaseEntity{
         this.imageUrl = imageUrl;
     }
 
-    public LocalDate getCreated() {
-        return created;
-    }
-
-    public void setCreated(LocalDate created) {
-        this.created = created;
-    }
-
-    public LocalDate getModified() {
-        return modified;
-    }
-
-    public void setModified(LocalDate modified) {
-        this.modified = modified;
-    }
+//    public LocalDate getCreated() {
+//        return created;
+//    }
+//
+//    public void setCreated(LocalDate created) {
+//        this.created = created;
+//    }
+//
+//    public LocalDate getModified() {
+//        return modified;
+//    }
+//
+//    public void setModified(LocalDate modified) {
+//        this.modified = modified;
+//    }
 }
